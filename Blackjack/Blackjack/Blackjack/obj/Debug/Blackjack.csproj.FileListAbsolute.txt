@@ -1,0 +1,10 @@
+E:\SemestrIV\Prog\Blackjack\Blackjack\Blackjack\bin\Debug\Blackjack.exe.config
+E:\SemestrIV\Prog\Blackjack\Blackjack\Blackjack\bin\Debug\Blackjack.exe
+E:\SemestrIV\Prog\Blackjack\Blackjack\Blackjack\bin\Debug\Blackjack.pdb
+E:\SemestrIV\Prog\Blackjack\Blackjack\Blackjack\obj\Debug\Blackjack.csprojAssemblyReference.cache
+E:\SemestrIV\Prog\Blackjack\Blackjack\Blackjack\obj\Debug\Blackjack.Form1.resources
+E:\SemestrIV\Prog\Blackjack\Blackjack\Blackjack\obj\Debug\Blackjack.Properties.Resources.resources
+E:\SemestrIV\Prog\Blackjack\Blackjack\Blackjack\obj\Debug\Blackjack.csproj.GenerateResource.cache
+E:\SemestrIV\Prog\Blackjack\Blackjack\Blackjack\obj\Debug\Blackjack.csproj.CoreCompileInputs.cache
+E:\SemestrIV\Prog\Blackjack\Blackjack\Blackjack\obj\Debug\Blackjack.exe
+E:\SemestrIV\Prog\Blackjack\Blackjack\Blackjack\obj\Debug\Blackjack.pdb
