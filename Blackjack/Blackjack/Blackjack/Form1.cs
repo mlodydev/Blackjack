@@ -15,15 +15,6 @@ namespace Blackjack
         public Form1()
         {
             InitializeComponent();
-            /*Talia talia = new Talia();
-            Console.WriteLine(talia.IloscKart);
-            List<Karta> trzykarty = talia.WydajKarty(3);
-            foreach(Karta karta in trzykarty)
-            {
-                Console.WriteLine(karta.ToString());
-            }*/
-
-
         }
 
         public string kartyGracza
@@ -43,7 +34,7 @@ namespace Blackjack
         }
 
         public event Action Dobieraj;
-        //public event Action Trzymaj;
+        public event Action Trzymaj;
         //public event Action Start;
 
         private void button1Dobieraj_click(object sender, EventArgs e)
@@ -54,5 +45,17 @@ namespace Blackjack
             }
         }
 
+        private void Button2Trzymaj_Click(object sender, EventArgs e)
+        {
+            if (Trzymaj != null)
+            {
+                Trzymaj();
+            }
+        }
+
+        private void Button3Start_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

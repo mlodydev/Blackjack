@@ -12,7 +12,7 @@ namespace Blackjack
         string kartyKrupiera { set; }
 
         event Action Dobieraj;
-        //event Action Trzymaj;
+        event Action Trzymaj;
         //event Action Start;
     }
 }

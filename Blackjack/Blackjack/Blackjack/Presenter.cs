@@ -17,21 +17,22 @@ namespace Blackjack
             this.viev = viev;
 
             bool czykoniec = false;
-            while (czykoniec == false)
-            {
+            //while (czykoniec == false)
+            //{
                 model.PierwszeRozdanie();
 
                 viev.kartyGracza = model.kartyGraczaString();
-                viev.kartyKrupiera = model.kartyKrupieraString();
+                viev.kartyKrupiera = model.kartyKrupieraZakryteString();
                 model.liczSume();
                 czykoniec = model.bustedGracz();
                 this.viev.Dobieraj += Dobieranie;
+                this.viev.Trzymaj += Trzymanie;
 
 
 
                 //usun ponizej, nieskonczona petla by byla
                 czykoniec = true;
-            }
+            //}
 
         }
 
@@ -44,6 +45,17 @@ namespace Blackjack
                 Console.WriteLine("powinno banglac");
             }
             model.liczSume();
+            if (model.sumaKrupiera() <= 16)
+            {
+                model.dobieraKrupier();
+            }
+            viev.kartyKrupiera = model.kartyKrupieraString();
+        }
+        private void Trzymanie()
+        {
+            model.liczSume();
+            Console.WriteLine("dziala");
+            viev.kartyGracza = model.ktoWygral();
         }
     }
 }

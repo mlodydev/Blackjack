@@ -34,7 +34,8 @@ namespace Blackjack
                 foreach (string figura in figury)
                 {
                     karty1.Add(new Karta(kolor, figura, wartoscKarty));
-                    wartoscKarty++;
+                    if(wartoscKarty<11)
+                        wartoscKarty++;
                     if (wartoscKarty > 11) wartoscKarty = 10;
                 }
             }

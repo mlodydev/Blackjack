@@ -38,6 +38,16 @@ namespace Blackjack
                 }
         }
 
+        public int sumaKrupiera()
+        {
+            int suma = 0;
+            foreach (Karta karta in krupier.Karty)
+            {
+                suma += karta.Wartosc;
+            }
+            return suma;
+        }
+
         public string kartyGraczaString()
         {
 
@@ -50,9 +60,21 @@ namespace Blackjack
             return karty;
         }
 
-        public string kartyKrupieraString()
+        public string kartyKrupieraZakryteString()
         {
 
+            /*string karty = "";
+            foreach (Karta karta in krupier.Karty)
+            {
+                karty += karta.ToString();
+                karty += " ";
+            }
+            return karty;*/
+            return krupier.Karty.ElementAt(0) + " x x";
+        }
+
+        public string kartyKrupieraString()
+        {
             string karty = "";
             foreach (Karta karta in krupier.Karty)
             {
@@ -66,6 +88,12 @@ namespace Blackjack
         {
             Karta nowaKarta = talia.WydajKarte();
             this.gracz.Karty.Add(nowaKarta);
+        }
+
+        public void dobieraKrupier()
+        {
+            Karta nowaKarta = talia.WydajKarte();
+            this.krupier.Karty.Add(nowaKarta);
         }
 
         public bool bustedGracz()
@@ -83,9 +111,45 @@ namespace Blackjack
                 return czykoniec;
         }
 
+        public bool bustedKrupier()
+        {
+            bool czykoniec = false;
+            if (gracz.Suma > 21)
+            {
+                foreach (Karta karta in krupier.Karty)
+                {
+                    if (karta.Figura == "A")
+                        karta.Wartosc = 1;
+                }
+                liczSume();
+            }
+            return czykoniec;
+        }
+
         public int ilekart()
         {
             return gracz.Karty.Count();
         }
+
+        public bool czytokoniec()
+        {
+            bool decyzja = bustedGracz();
+            decyzja = bustedKrupier();
+            return false;
+        }
+        public string ktoWygral()
+        {
+            string zwyciezca = "";
+
+            if (gracz.Suma > krupier.Suma)
+                zwyciezca = "wygrales";
+            else if (gracz.Suma == krupier.Suma)
+                zwyciezca = "remis";
+            else
+                zwyciezca = "przegrales";
+
+            return zwyciezca;
+        }
+        
     }
 }

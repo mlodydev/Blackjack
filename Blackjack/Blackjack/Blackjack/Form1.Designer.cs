@@ -87,6 +87,7 @@
             this.button2Trzymaj.TabIndex = 5;
             this.button2Trzymaj.Text = "Trzymaj";
             this.button2Trzymaj.UseVisualStyleBackColor = true;
+            this.button2Trzymaj.Click += new System.EventHandler(this.Button2Trzymaj_Click);
             // 
             // button3Start
             // 
@@ -96,6 +97,7 @@
             this.button3Start.TabIndex = 6;
             this.button3Start.Text = "Start";
             this.button3Start.UseVisualStyleBackColor = true;
+            this.button3Start.Click += new System.EventHandler(this.Button3Start_Click);
             // 
             // Form1
             // 
